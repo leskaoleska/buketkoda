@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    int K;
+    
+    printf("Введите номер дня года (1-365): ");
+    scanf("%d", &K);
+    if (K < 1 || K > 365) {
+        printf("Ошибка: число должно быть в диапазоне 1-365\n");
+        return 1;
+    }
+    
+    int day_number = (K + 0) % 7;
+    
+    if (day_number == 0) {
+        day_number = 7;
+    }
+    
+    printf("День недели для %d-го дня года: ", K);
+    
+    switch (day_number) {
+        case 1:
+            printf("Понедельник\n");
+            break;
+        case 2:
+            printf("Вторник\n");
+            break;
+        case 3:
+            printf("Среда\n");
+            break;
+        case 4:
+            printf("Четверг\n");
+            break;
+        case 5:
+            printf("Пятница\n");
+            break;
+        case 6:
+            printf("Суббота\n");
+            break;
+        case 7:
+            printf("Воскресенье\n");
+            break;
+    }
+    
+    return 0;
+}
+
