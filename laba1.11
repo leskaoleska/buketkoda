@@ -1,0 +1,3 @@
+S = input("Введите строку S: ")
+result = ' '.join(S)
+print(result)
